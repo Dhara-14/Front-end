@@ -1,0 +1,313 @@
+/* .navbar{
+    
+}
+.navpath{
+    display:flex;
+    justify-content: initial;
+    height: 100vh;
+    margin-right: 40px;
+    top:150px;
+
+}
+.navpath a{
+    text-decoration: none;
+    color:black;
+    padding:10px;
+    display: inline-block;
+    /* margin-left:0px;
+    column-gap: 20px;
+    margin-top: 50px; 
+}
+
+.automation{
+    display: flex;
+    top: 0px;
+    left:0px;
+}
+.automation1{
+    display:none;
+}
+
+.cashcount a:hover .navpath1{
+   display:block;
+}
+
+.billing-machine1{
+    display: none;
+}
+
+.navbar-pic{
+    display:inline-block;
+}
+.navbar-pic{
+    display:inline-block;
+    margin-left:220px;
+    
+}
+*/
+*{
+    margin:0px;
+    padding:0;
+   
+}
+body{
+    width:100%;
+   
+}
+
+.navbar{
+    display:flex;
+    width:1512px;
+    justify-content: space-between;
+}
+.navpath{
+
+    margin-right:60px;
+}
+.navpath a{
+    margin-right:20px;
+}
+
+
+
+.main img{
+    
+    display:flex;
+    position:relative;
+    top:80px;
+}
+.para{
+    max-width: 650px;
+    max-height:fit-content;
+    text-align: justify;
+    line-height: 20px;
+    position:relative;
+    top:150px;
+}
+
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+.First-para{
+    display:flex;
+    /* background-color: aquamarine; */
+
+}
+.para{
+    position: relative;
+    left:150px;
+
+}
+
+.video{
+  position:relative; 
+  top:150px; 
+  margin-left: 200px;
+}
+
+.secondcon{
+    display: flex;
+    height:100vh;
+    
+}
+.img1,.para2{
+    position:relative;
+    margin-left: 150px;
+    top:200px;
+}
+.para2{
+    color:white;
+}
+.img1{
+    width:315px;
+    height:320px;
+}
+.img1:hover{
+    border : 2px solid rgb(132, 0, 255);
+    border-radius: 25px;
+    box-shadow: 3px 3px 3px 3px;
+}
+
+.pic1,.pic2,.pic3{
+    display:inline-block;
+}
+.pic1{
+    margin-left: 7px;
+}
+.pic1 a{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.secondcon-button button{
+    background-color: rgb(59, 59, 138);
+    height:40px;
+    width:100px;
+    color: white;
+    padding:10px;
+    position:relative;
+    top:620px;
+   right:650px;
+}
+
+.thirdcon{
+    display:flex;
+
+}
+.third-con-para{
+    margin-left:150px;
+}
+.threeimg1,.threeimg2,.threeimg3{
+    display:inline-block;
+}
+.threeimg4{
+    margin-left:35px;
+}
+.thirdcon-button button{
+    position:relative;
+    top:400px;
+    right:1000px;
+    height:30px;
+}
+.third-con-para p{
+    color:white;
+}
+.thirdcon-button button:hover{
+    
+    background-color: aqua;
+}
+
+.fourthcon{
+  display:flex;
+}
+.fourth-con-para{
+    position:relative;
+    left:150px;
+}
+.fourth-con-para p{
+    color:white;
+}
+.fourimg2,.fourimg3,.fourimg4{
+    display:inline-block;
+    margin-left:20px;
+}
+.fourthcon-button{
+    position:relative;
+    left:620px;
+}
+.fourthcon-button button{
+    padding:10px;
+    background-color:rgb(28, 135, 154);
+    color: white;
+    top:300px;
+
+}
+.fourthcon-button button:hover{
+    text-decoration: underline;
+    background-color:  rgb(55, 55, 141);;
+}
+.fifthimg{
+    display:flex;
+    height:100vh;
+}
+
+.fifthimg1,.fifthimg2,.fifthimg3,.fifthimg4{
+    display:inline-block;
+    margin-left:70px;
+}
+.fifthcon{
+    background-color: rgba(0,0,0,0.2);
+    height: 400px;
+    width:1512px;
+}
+.moredetail{
+    display:flex;
+    background-color: black;
+    color: white;
+    width: 1512px;
+    height:350px;
+}
+.eroimg,.eropara,.automation,.erocont{
+    width:270px;
+    height:229px;
+    text-align: justify;
+    margin-left:100px;
+    margin-top:20px;
+}
+.ero-list li{
+    list-style-type: none;
+    padding:3px;
+}
+.ero-list a{
+    text-decoration: none;
+    color: white;
+    padding:2px;
+}
+.ero-list1 li{
+    list-style-type: none;
+    padding:3px;
+}
+.ero-list1 a{
+    text-decoration: none;
+    color: white; 
+    padding:2px;
+}
+ .copydetail{
+    display:flex;
+    width:1512px;
+    justify-content: space-between;
+    background-color: black;
+    color:white;
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ #a1{
+    text-decoration: none;
+    padding:5px;
+}
+#li1{
+    list-style: none;
+    padding:10px;
+}
+.navpath1{
+  display:none;
+}
+#option1:hover .navpath1 {
+    display:block;
+}
+.navpath1{
+    box-sizing: border-box;
+    border:none;
+}
+.nav-anger{
+    display:flex;
+    position:relative;
+    top:25px;
+    margin-left:50px;
+} 
+
+
+
+
+
+
+
+

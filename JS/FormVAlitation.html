@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form id="form">
+        <input type="text" id="user">
+        <input type="password" id="pass">
+        <input type="submit">
+        <button id="btn">Clear</button>
+    </form>
+
+
+</body>
+</html>
+
+<script>
+    let form = document.getElementById('form');
+    let user = document.getElementById('user');
+    let pass = document.getElementById('pass');
+    let btn = document.getElementById('btn');
+
+    form.addEventListener('submit',function(e){
+        e.preventDefault();
+
+        if(user.value==''){
+            alert('NAme Empty..')
+        }
+        else if(pass.value==''){
+            alert("password Error..")
+        }
+        else{
+            console.log(user.value);
+            console.log(pass.value);
+            localStorage.setItem('USer',user.value)
+            localStorage.setItem('pass',pass.value)
+            sessionStorage.setItem('USer',user.value)
+            sessionStorage.setItem('pass',pass.value)
+   
+        }
+
+        form.reset();
+        
+        
+    })
+
+    
+</script>

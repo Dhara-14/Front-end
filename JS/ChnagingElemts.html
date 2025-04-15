@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="hello" class="" style="color: red;">Surya</h1>
+
+<ul id="ul">
+    <li>one</li>
+    <li>Two</li>
+</ul>
+
+<div id="home">
+    <h1 id="child1">Surya</h1><h1 id="child2">IDM</h1>
+</div>
+
+
+</body>
+</html>
+<style>
+    .surya{
+        background-color: rgb(21, 255, 0);
+    }
+</style>
+
+<script>
+
+
+let date = new Date()
+
+date.setFullYear(1996)
+
+console.log(date);
+console.log(date.getDate());
+console.log(date.getFullYear());
+console.log(date.getHours());
+console.log(date.getMinutes());
+console.log(date.getSeconds());
+
+let num = 10.8888 ;
+
+console.log(num);
+console.log(num.toExponential());
+console.log(num.toFixed(2));
+console.log(num.toLocaleString());
+console.log(num.toPrecision(3));
+console.log(num.toString());
+
+
+
+
+
+    let home = document.getElementById('home');
+
+    let child1= document.getElementById('child1')
+    let child2= document.getElementById('child2')
+
+    console.log(home.children.length);
+    console.log(child1.parentNode.nodeName);
+    console.log(child1.nextSibling); 
+    console.log(child2.previousSibling);
+       
+      
+    
+
+
+    let a = document.getElementById('hello')
+    console.log(a.getAttributeNames());
+    a.setAttribute('style','color:yellow');
+
+    a.classList.add('surya')
+    a.classList.remove('surya');
+
+
+    
+    // let b = document.createElement('h1');
+    // b.innerHTML='idmtechpark';
+
+    // document.body.append(b);
+
+
+    // let ul =document.getElementById('ul')
+   // let li = document.createElement('li');
+   // li.innerHTML="Three";
+
+   //ul.insertBefore(li,ul.children[2]);
+
+</script>

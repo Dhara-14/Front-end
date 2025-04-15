@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook-login or sign up</title>
+    <link rel="icon" href="https://1.bp.blogspot.com/-S8HTBQqmfcs/XN0ACIRD9PI/AAAAAAAAAlo/FLhccuLdMfIFLhocRjWqsr9cVGdTN_8sgCPcBGAYYCw/s1600/f_logo_RGB-Blue_1024.png">
+</head>
+<body>
+    <div class="main">
+        <div class="one">
+            <img width="180px" height="106px" src="https://static.xx.fbcdn.net/rsrc.php/y1/r/4lCu2zih0ca.svg" alt="">
+            <p>Facebook helps you connect and share with the people in your life.</p>
+        </div>
+        <div style="width:250px; height:200px;" class="two">
+            <input id="user" type="text" placeholder="Email address or phone number"><br>
+            <input id="pass" type="password" placeholder="Password"><br>
+            <button id="login" style="border:none;" onclick="login()">Log in</button><br>
+            <a href="###">Forgotten password?</a>
+            <hr>
+            <button id="btn">Create new account</button>
+            <p style="font-size:11px;"><b><a id="a1" style="font-size:11px; margin-right: 3px;" href="#">Create a Page</a></b>for a celebrity, brand or business.</p>
+    
+        </div>
+    </div>
+    
+</body>
+</html>
+<style>
+
+    .main{
+        display:flex;
+        justify-content: space-between;
+    }
+    .one{
+        width:370px;
+        position:absolute;
+        left:150px;
+    }
+    .one img{
+        margin-bottom: 0px;
+        position:absolute;
+        top:100px;
+        left:100px;
+    }
+    .one p{
+        position:absolute;
+        top:170px;
+        left:120px;  
+    }
+    .two{
+        /* width:100px;
+        position:absolute;
+        right:120px;
+        top:150px;
+        border:2px whitesmoke solid;
+        box-shadow: 10px 10px 5px lightblue;;
+        */
+
+      /* border:2px solid grey;  */
+      background-color:whitesmoke;
+      position:absolute;
+      right:200px;
+      top:150px; 
+      justify-items: center;
+
+    }
+
+    .two input{
+        margin-bottom: 15px;
+        margin-top:5px;
+        
+    }
+   
+    #login{
+        height:30px;
+        width:175px;
+        margin-bottom:15px;
+        background-color: rgba(0, 0, 255, 0.808);
+        color:white;
+        
+    }
+
+    #login:hover{
+        cursor: pointer;
+    }
+    .two a{
+        text-decoration:none ;
+        font-size:10px;
+        margin-left: 30px;
+    }
+    a:hover{
+        cursor: pointer;
+        text-decoration: underline;
+    }
+
+  #btn{
+    width:150px;
+    padding:5px;
+    border:none;
+    background-color:rgb(34, 209, 7) ;
+    color:white;
+  }
+
+  #btn:hover{
+    cursor: pointer;
+  }
+
+#a1:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+
+</style>
+
+<script>
+
+function  login(){
+    
+
+    let user = document.getElementById('user').value;
+    let pass = document.getElementById('pass').value;
+ 
+        if((user==="Dharani") && (pass==="12345")){
+          window.location.href="home.html"
+        }
+        else{
+           window.location.href="FacebookValid2.html" 
+   
+        }
+
+}
+
+</script>

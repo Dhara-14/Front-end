@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="home">
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+    </div>
+    
+</body>
+</html>
+
+
+<style>
+    .home{
+        background-color: lightgreen;
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+        align-items: center;
+    }
+    .child{
+        width: 100px;
+        height: 100px;
+        background-color: yellow;
+        transition: 2s;
+        border: 2px solid red;
+    }
+    .child:hover{
+        background-color: blue;
+        /* border-radius: 50%; */
+        /* transform: translateX(100px); */
+        /* transform: skewY(45deg); */
+        transform: scaleZ(2);
+        /* transform: rotateY(180deg); */
+    }
+</style>

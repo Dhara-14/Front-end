@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+        <div class="home">
+            <div class="child">one</div>
+            <!-- <div class="child">two</div> -->
+            <!-- <div class="child">three</div>
+            <div class="child">four</div>
+            <div class="child">five</div>
+            <div class="child">six</div>
+            <div class="child">seven</div> -->
+        </div>
+
+</body>
+</html>
+<style>
+    .home{
+        background-color: rgb(195, 230, 124);
+        display: flex;
+        /* flex-direction: row-reverse;
+        flex-wrap: wrap; */
+        /* flex-flow:row-reverse wrap ; */
+        justify-content: space-evenly;
+        height: 100vh;
+        align-items: center;
+    }
+    .child{
+        width: 100px;
+        height: 100px;
+        border: 2px solid red;
+        position: relative;
+        animation-name: surya;
+        animation-iteration-count: infinite;
+        animation-duration: 4s;
+    }
+
+@keyframes surya {
+    /* from{
+        left: 0px;
+    }
+    to{
+        left: 100px;
+    } */
+
+    0%{
+        left: 0;
+        top: 0;
+    }
+    25%{
+        left: 100px;
+        top: 0;
+    }
+    50%{
+        left: 100px;
+        top: 100px;
+    }
+    75%{
+        left: 0;
+        top: 100px;
+    }
+    100%{
+        top: 0;
+        left: 0;
+    }
+}
+</style>

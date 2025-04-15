@@ -1,0 +1,504 @@
+jQuery(document).ready(function($) {
+
+    // *** SETUP *** //
+    
+    var users = "150,000";
+    var countries = "186";
+    var languages = "30";
+    var subscriptions = "75,000";
+    
+    $('.users').html(users);    
+    $('.countries').html(countries);    
+    $('.languages').html(languages);    
+    $('.subscriptions').html(subscriptions);
+    
+    // *** HIDE STUFF *** //
+    
+    $('.webinar-list').hide();
+
+    
+    // *** MENUS INVOICE *** //
+    
+    var invoiceCount = 0
+    function invoiceSlider() {
+        if(invoiceCount == 9) {
+            invoiceCount=0;
+        } else {
+            invoiceCount++;
+        } 
+        $('.menus-invoice').hide();
+        $('.menus-invoice-'+invoiceCount).show();
+    }
+    setInterval(invoiceSlider, 5000);
+	
+	// *** MENUS INVOICE TWO *** //
+    $('.minvoice').hide();
+    $('.minvoice1').show();
+	
+    var invoiceCount2 = 1
+    function invoiceSlider2() {
+        if(invoiceCount2 == 9) {
+            invoiceCount2=1;
+        } else {
+            invoiceCount2++;
+        } 
+        $('.minvoice').hide();
+        $('.minvoice'+invoiceCount2).show();
+    }
+    setInterval(invoiceSlider2, 5000);
+	
+	
+	// *** CONNECT PHONE *** //
+    $('.connectphone').hide();
+    $('.connectphone1').show();
+	
+    var phoneCount = 1
+    function phoneSlider() {
+        if(phoneCount == 4) {
+            phoneCount=1;
+        } else {
+            phoneCount++;
+        } 
+        $('.connectphone').hide();
+        $('.connectphone'+phoneCount).show();
+    }
+    setInterval(phoneSlider, 2500);
+
+	
+	
+	// *** FAQ TABS *** //
+	
+	$('#faq-live').hide();
+	$('#faq-menus').hide();
+	$('#faq-triage').hide();
+	
+	$('.faq-live-icon').click(function(){
+		console.log('live clicked');
+		$('#faq-menus').hide();
+		$('#faq-triage').hide();
+		$('#faq-live').show();
+		$('.faq-live-icon').addClass('faq-selected');
+		$('.faq-menus-icon').removeClass('faq-selected');
+		$('.faq-triage-icon').removeClass('faq-selected');
+	});
+	
+	$('.faq-menus-icon').click(function(){
+		console.log('menus clicked');
+		$('#faq-live').hide();
+		$('#faq-triage').hide();
+		$('#faq-menus').show();
+		$('.faq-live-icon').removeClass('faq-selected');
+		$('.faq-menus-icon').addClass('faq-selected');
+		$('.faq-triage-icon').removeClass('faq-selected');
+	});
+	
+	$('.faq-triage-icon').click(function(){
+		console.log('triage clicked');
+		$('#faq-live').hide();
+		$('#faq-menus').hide();
+		$('#faq-triage').show();
+		$('.faq-live-icon').removeClass('faq-selected');
+		$('.faq-menus-icon').removeClass('faq-selected');
+		$('.faq-triage-icon').addClass('faq-selected');
+	});
+	
+    
+    
+	$('#rec-spec-superservice').hide()
+	$('#rec-spec-microcat-epc').hide()
+    
+    $('.rec-spec-microcat-epc-icon').click(function(){
+		console.log('microcat epc clicked');
+		$('#rec-spec-superservice').hide();
+		$('#rec-spec-microcat-epc').show();
+		$('.rec-spec-microcat-epc-icon').addClass('faq-selected');
+		$('.rec-spec-superservice-icon').removeClass('faq-selected');
+	});
+	
+
+    $('.rec-spec-superservice-icon').click(function(){
+		console.log('superservice clicked');
+		$('#rec-spec-microcat-epc').hide()
+		$('#rec-spec-superservice').show();
+		$('.rec-spec-superservice-icon').addClass('faq-selected');
+		$('.rec-spec-microcat-epc-icon').removeClass('faq-selected');
+	});
+    
+    
+    // *** WEBINAR SELECTION *** //
+    
+    $('.option-triage').click(function(){
+        $('.webinar-option').removeClass('webinar-option-selected');
+        $(this).addClass('webinar-option-selected');
+        $('.webinar-list').hide();
+        $('#webinar-list-triage').show();
+    });
+    
+    $('.option-live').click(function(){
+        $('.webinar-option').removeClass('webinar-option-selected');
+        $(this).addClass('webinar-option-selected');
+        $('.webinar-list').hide();
+        $('#webinar-list-live').show();
+    });
+    
+    $('.option-partsbridge').click(function(){
+        $('.webinar-option').removeClass('webinar-option-selected');
+        $(this).addClass('webinar-option-selected');
+        $('.webinar-list').hide();
+        $('#webinar-list-partsbridge').show();
+    });
+    
+    
+	// *** NEW CONTACT  FORM *** //
+	
+	$('.contact-section').hide();
+    $('.contact-section-department').show();
+    $('.option-support').click(function(){
+        $('.contact-option').removeClass('option-selected');
+        $('.contact-option-2').removeClass('option-selected');
+        $(this).addClass('option-selected');
+        $('.contact-section-3').hide();
+        $('.contact-section-2').hide();
+        $('.contact-section-support').show();
+    });
+    $('.option-sales').click(function(){
+        $('.contact-option').removeClass('option-selected');
+        $('.contact-option-2').removeClass('option-selected');
+        $(this).addClass('option-selected');
+        $('.contact-section-3').hide();
+        $('.contact-section-2').hide();
+        $('.contact-section-sales').show();
+    });
+    $('.option-investor').click(function(){
+        $('.contact-option').removeClass('option-selected');
+        $('.contact-option-2').removeClass('option-selected');
+        $(this).addClass('option-selected');
+        $('.contact-section-3').hide();
+        $('.contact-section-2').hide();
+        $('.contact-section-investor').show();
+    });
+    $('.option-hr').click(function(){
+        $('.contact-option').removeClass('option-selected');
+        $('.contact-option-2').removeClass('option-selected');
+        $(this).addClass('option-selected');
+        $('.contact-section-3').hide();
+        $('.contact-section-2').hide();
+        $('.contact-section-hr').show();
+    });
+    $('.option-sales-yes').click(function(){
+        $('.contact-option-2').removeClass('option-selected');
+        $(this).addClass('option-selected');
+        $('.contact-section-3').hide();
+        $('.contact-section-sales-yes').show();
+    });
+    $('.option-sales-no').click(function(){
+        $('.contact-option-2').removeClass('option-selected');
+        $(this).addClass('option-selected');
+        $('.contact-section-3').hide();
+        $('.contact-section-sales-no').show();
+    });
+	
+	var franchisedSelected = false;
+	
+	$('.contact-option-2').click(function(){
+		if(franchisedSelected == false) {
+			$('.franchised-note').slideUp();
+			franchisedSelected = true;
+		}
+	});
+	
+    // *** CONTACT US FORM *** //
+    
+    var department = "";
+    var region = "";
+    var preselected = window.location.hash.substr(1);
+    
+    if (preselected == "investor-relations") {
+        $('.contact-us-department').hide();
+        $('.contact-us-region').hide();
+        $('.investors-all').show();
+        $('.selection-display').show().html('Investor Relations');
+        $('.contact-reset').show();
+    }
+    
+    $('.contact-reset').click(function() {
+        $('.contact-reset').hide();
+        $('.selection-display').hide();
+        $('.cu-form').hide();
+        $('.contact-us-region').hide().find('option:first').attr('selected', 'selected');
+        $('.contact-us-department').show().find('option:first').attr('selected', 'selected');
+    });
+    
+    $('.contact-us-department').change(function() {
+        department = $( "#contact-selection option:selected" ).val();
+        
+        if (department == '') {
+            $('.contact-us-region').hide();
+        }
+        if (department == 'support') {
+            $('.contact-us-region').show();
+        }
+        if (department == 'sales') {
+            $('.contact-us-region').show();
+        }
+        if (department == 'investors') {
+            $('.contact-us-department').hide();
+            $('.contact-us-region').hide();
+            $('.investors-all').show();
+            $('.selection-display').show().html('Investor Relations');
+            $('.contact-reset').show();
+        }
+        if (department == 'hr') {
+            $('.contact-us-department').hide();
+            $('.contact-us-region').hide();
+            $('.hr-all').show();
+            $('.selection-display').show().html('Human Resources');
+            $('.contact-reset').show();
+        }
+        
+    });
+    
+    $('.contact-us-region').change(function() {
+        region = $( "#region-selection option:selected" ).val();
+        
+        if (region == "asiapacific" && department == "support") {
+            $('.contact-us-department').hide();
+            $('.contact-us-region').hide();
+            $('.support-asiapac').show();
+            $('.selection-display').show().html('Customer Support – Asia Pacific');
+            $('.contact-reset').show();
+        }
+        if (region == "asiapacific" && department == "sales") {
+            $('.contact-us-department').hide();
+            $('.contact-us-region').hide();
+            $('.sales-asiapac').show();
+            $('.selection-display').show().html('Sales – Asia Pacific');
+            $('.contact-reset').show();
+        }
+        if (region == "americas" && department == "support") {
+            $('.contact-us-department').hide();
+            $('.contact-us-region').hide();
+            $('.support-americas').show();
+            $('.selection-display').show().html('Customer Support – Americas');
+            $('.contact-reset').show();
+        }
+        if (region == "americas" && department == "sales") {
+            $('.contact-us-department').hide();
+            $('.contact-us-region').hide();
+            $('.sales-americas').show();
+            $('.selection-display').show().html('Sales – Americas');
+            $('.contact-reset').show();
+        }
+        if (region == "emea" && department == "support") {
+            $('.contact-us-department').hide();
+            $('.contact-us-region').hide();
+            $('.support-emea').show();
+            $('.selection-display').show().html('Customer Support – Europe, Middle East & Africa');
+            $('.contact-reset').show();
+        }
+        if (region == "emea" && department == "sales") {
+            $('.contact-us-department').hide();
+            $('.contact-us-region').hide();
+            $('.sales-emea').show();
+            $('.selection-display').show().html('Sales – Europe, Middle East & Africa');
+            $('.contact-reset').show();
+        }    
+    });
+	
+	
+	// *** PREVENT DUPLICATE FORMS *** //
+	
+	(function() {
+        var ev = new $.Event('style'), 
+			orig = $.fn.css;
+		$.fn.css = function() {
+            $(this).trigger(ev);
+			return orig.apply(this, arguments);
+        }
+    })();	
+	
+	setTimeout(function () {
+        $('img.ajax-loader').bind('style', function (e) {
+
+            var style = $(this).attr('style');
+            //console.log("style: " + style);
+            if(style) {
+                if(style.indexOf("hidden") > 1) {
+                    // enable button
+                    //console.log("Disable  button");
+                    $('input.wpcf7-submit').attr('disabled','disabled');
+                } else {
+                    //console.log("Enable  button");
+                    $('input.wpcf7-submit').prop('disabled', false);
+                }
+            }
+        });
+    }, 2000)
+	
+	
+	// *** BLOG MENU *** //
+	
+	var urlBase = "//www.infomedia.com.au"
+	var ttPages = [
+		"/1-know-your-customers/",
+		"/2-the-future-of-technology-in-vehicles/",
+		"/3-turn-your-data-into-information/",
+		"/4-connect-with-your-customers-via-the-internet/",
+		"/5-how-to-increase-customer-growth-and-retention/",
+		"/6-aftersales-a-collaboration-between-automakers-and-dealerships/",
+		"/7-aftersales-parts-vs-service/",
+		"/8-improving-parts-inventory-for-greater-efficiency/",
+		"/9-increasing-customer-engagement-in-the-service-driveway/",
+		"/10-get-to-know-your-customers-on-social-media/"
+		];
+	
+	$('#tt-part-selection').change(function(){
+		console.log('changed')
+		var pageRedirect = urlBase + ttPages[this.value-1];
+		console.log(pageRedirect)
+		window.location.replace(pageRedirect);
+	});
+
+    // *** UTM TRACKING ** //
+    // Retrieve my current url parameters
+    function getParameter(theParameter) {
+      var params = window.location.search.substr(1).split('&');
+      for (var i = 0; i < params.length; i++) {
+        var p=params[i].split('=');
+         if (p[0] == theParameter) {
+          return decodeURIComponent(p[1]);
+        }
+      }
+      return false;
+    }
+    
+    url_cpn = getParameter('utm_campaign');
+    url_src = getParameter('utm_source');
+    url_mdm = getParameter('utm_medium');
+    url_cnt = getParameter('utm_content');
+    
+
+    // I retrieve data from my cookie (if it exists) and I create an object in JavaScript.
+    var utmcookies = new Object();
+    var utm_cookie = Cookies.get('cookie_utms');
+    
+    // If at least one URL parameter exist AND the cookie doesn't exist
+    if((url_src!== false || url_mdm!==false || url_cpn!==false || url_cnt!==false) && (utm_cookie == null || utm_cookie == "" )) {
+        console.log('A');
+        if(url_src!== false){ 
+        utmcookies["source"] = url_src; 
+        }
+        if(url_mdm!==false){
+        utmcookies["medium"] = url_mdm; 
+        }
+        if (url_cpn!==false) {
+        utmcookies["campaign"] = url_cpn;
+        }
+        if (url_cnt!==false) {
+        utmcookies["content"] = url_cnt;
+        }
+        Cookies.set('cookie_utms', utmcookies, { expires: 31 } );
+    }
+    
+    // Else if we get at least URL parameter AND the cookie exist
+    else if((url_src!== false || url_mdm!==false || url_cpn!==false || url_cnt!==false) && (utm_cookie != null || utm_cookie != "")) {
+        utm_cookie_choco = JSON.parse(utm_cookie);
+        
+        if(utm_cookie_choco["source"] != undefined) {
+            if(url_src!== false && utm_cookie_choco["source"].indexOf(url_src) != -1 ){
+                utmcookies["source"] = utm_cookie_choco["source"]; 
+            }
+            else if(url_src!== false){
+                utmcookies["source"] = utm_cookie_choco["source"]+" | "+url_src; 
+            }
+            else if ( url_src == false && utm_cookie_choco["source"] != undefined) { 
+                utmcookies["source"] = utm_cookie_choco["source"]; 
+            }
+        }									 
+        else if ( url_src!== false ) { 
+            utmcookies["source"] = url_src; 
+        }
+        
+        if(utm_cookie_choco["medium"] != undefined) {
+            if(url_mdm!== false && utm_cookie_choco["medium"].indexOf(url_mdm) != -1 ){
+                utmcookies["medium"] = utm_cookie_choco["medium"];
+            }
+            else if(url_mdm!== false ) { 
+                utmcookies["medium"] = utm_cookie_choco["medium"]+" | "+url_mdm; 
+            }
+            else if(url_mdm == false){
+                utmcookies["medium"] = utm_cookie_choco["medium"]; 
+            }
+        }
+        else if(url_mdm!== false){
+            utmcookies["medium"] = url_mdm; 
+        }
+        
+        if(utm_cookie_choco["campaign"] != undefined) {
+            if(url_cpn!== false && utm_cookie_choco["campaign"].indexOf(url_cpn) != -1 ){
+                utmcookies["campaign"] = utm_cookie_choco["campaign"];
+            }
+            else if(url_cpn!== false) { 
+                utmcookies["campaign"] = utm_cookie_choco["campaign"]+" | "+url_cpn; 
+            }  
+            else if(url_cpn == false){
+                utmcookies["campaign"] = utm_cookie_choco["campaign"]; 
+            } 
+        }
+        else if(url_cpn!== false){
+        utmcookies["campaign"] = url_cpn; 
+        }
+        
+        if(utm_cookie_choco["content"] != undefined) {
+            if(url_cnt!== false && utm_cookie_choco["content"].indexOf(url_cnt) != -1 ){
+                utmcookies["content"] = utm_cookie_choco["content"];
+            }
+            else if(url_cnt!== false ) { 
+                utmcookies["content"] = utm_cookie_choco["content"]+" | "+url_cnt; 
+            }
+            else if(url_cnt == false){
+                utmcookies["content"] = utm_cookie_choco["content"]; 
+            }
+        }
+        else if(url_cnt!== false){
+            utmcookies["content"] = url_cnt; 
+        }
+        Cookies.set('cookie_utms', utmcookies, { expires: 31 } );
+    }    
+    
+    
+      
+     // Retrieve data from the cookie and use it on your page
+    var cookie = Cookies.get('cookie_utms');
+    console.log('test-1');
+    if(cookie != undefined){
+        console.log('test-2');
+        cookie_choco = JSON.parse(cookie);
+        var cookie_cpn = cookie_choco["campaign"];
+        var cookie_src = cookie_choco["source"];
+        var cookie_mdm = cookie_choco["medium"];
+        var cookie_cnt = cookie_choco["content"];
+        // Now be creative and collect data !
+    }
+    
+
+    if (document.querySelector('.utm_campaign') !== null) {
+        console.log('test-3');
+        $('.utm_campaign').val(cookie_cpn);
+        $('.utm_source').val(cookie_src);
+        $('.utm_medium').val(cookie_mdm);
+        $('.utm_content').val(cookie_cnt);
+        
+        
+        $('input[name=utm_campaign]').val(cookie_cpn);
+    };
+    
+    // Privacy Page Print Button
+    $('.policy-print').click(function(){   
+        window.print();
+    });
+    	
+});
+
+
+

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form"> 
+        <input  id="user" type="text">
+        <input  id="date" type="date">
+        <input type="submit">
+</body>
+</html>
+<script>
+let form = document.getElementById("form")
+let user=document.getElementById("user")
+let date=document.getElementById("date")
+
+form.addEventListener('submit',function(e){
+    e.preventDefault();
+
+    if(user.value==''){
+        alert("user name is Empty");
+        
+    }
+    else if(date.value==''){
+        alert("Date is not filled");
+    }
+   else{
+    console.log(user.value);
+    console.log(date.value);
+    
+   }
+
+ form.reset();
+ 
+})
+</script> 
