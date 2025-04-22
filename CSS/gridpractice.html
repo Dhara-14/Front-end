@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Model</title>
+</head>
+<body>
+    <div class="home">
+        <div class="page1">First</div>
+        <div class="page2">Two</div>
+        <div class="page3">First</div>
+        <div class="page4">Two</div>
+        
+       </div> 
+</body>
+</html>
+<style>
+    .home{
+        display:grid;
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: auto;
+        grid-gap:50px;
+        background-color: blue;
+        padding:10px;
+    }
+
+    .home > div{
+        background-color: blueviolet;
+    }
+   
+</style>

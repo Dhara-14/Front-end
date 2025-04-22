@@ -29,7 +29,7 @@
         background-color: whitesmoke;
         border:2px solid whitesmoke;
         /* justify-content: center; 
-        margin-left:40%;
+        margin-left:40%; 
     } 
     */
     form{
@@ -73,14 +73,18 @@
 
 <script>
     let form = document.getElementById('form');
-    let user = document.getElementById('user').value;
-    let password = document.getElementById('password').value;
+    // let user = document.getElementById('user').value;
+    // let password = document.getElementById('password').value;
     let login = document.getElementById('btn');
 
 
 
-       login.addEventListener('click',function(){
+       login.addEventListener('click',function(event){
+           event.preventDefault();
            
+           
+           let user = document.getElementById('user').value;
+        let password = document.getElementById('password').value;
         if((user!="Dharanishree") && (password!="12345")) {
             
             Swal.fire({
@@ -94,6 +98,11 @@
             else{
              console.log(user);
              console.log(password);
+             Swal.fire({
+                icon: "success",
+                title: "Logged in!",
+                text: "Welcome back," + user + "!"
+            });
              
                
          }

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+
+    //      class B {
+    //     constructor(){
+    //         this.a="surya"
+    //     }
+    //   }
+
+    //   const n = new B();
+
+    //   console.log(n.a);
+      
+    //   let obj ={
+    //     Name:"surya",
+    //     Age:12
+    //   }
+
+
+    //   obj.city ="erode";
+
+
+    //   console.log(obj.Age);
+
+    // class A{
+    //     One(){
+    //         console.log("Welcome..");
+            
+    //     }
+    // }
+
+    // class B extends A{
+
+    // }
+
+    // const e = new B();
+
+    // e.One()
+      
+
+    class A{
+        add(){
+            console.log("welcome..");
+            
+        }
+    }
+
+    class B extends A{
+        add(){
+            console.log("runing...");
+            
+        }
+    }
+    class C extends B{
+        add(){
+            console.log("Final..");
+            
+        }
+    }
+
+    const x = new A();
+    const y = new B();
+    const z = new C();
+
+    console.log(x.add());
+    console.log(y.add());
+    console.log(z.add());
+
+
+
+
+    try{
+        console.log(10/"surya");
+        
+    }
+    catch(err){
+        console.log(err);
+        throw new Error("surya",err)
+        
+    }
+    finally{
+        console.log("to be counitiue...");
+        
+    }
+
+
+    function One(){
+        console.log("Runing...");
+        
+    }
+
+
+    async function TIme() {
+            await setInterval(()=>{
+                console.log("working..");
+                
+            },1000)        
+            One();
+    }
+    
+    TIme();
+
+    
+
+    </script>
+</body>
+</html>
